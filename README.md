@@ -1,43 +1,36 @@
 # PHP-MVC-ADVANCED
 
-*Note: This is the same like [panique/php-mvc](https://github.com/panique/php-mvc), but with additional features.*
-*This repo is in development, more to come...*
+*Atenção: Este é um projeto de tradução da versão original existente em [panique/php-mvc-advanced](https://github.com/panique/php-mvc-advanced).*
 
-### New in the advanced version:
+*Nota: Este projeto é igual ao projeto [panique/php-mvc](https://github.com/panique/php-mvc), mas com alguns recursos adicionais.*
+*Estamos em desenvolvimento, há mais por vir...*
+
+### Novo na versão avançada:
 
 1. Twig
-2. SASS-compiler in PHP ! The SASS compiling is optional, you can delete the scss folder and just use classic .css, too.
-   I've used https://github.com/panique/laravel-sass here.
+2. SASS-compiler in PHP ! A compilação utilizando SASS é opcional, você pode apagar o diretório scss e usar apenas o .css clássico também.
+   Usei o https://github.com/panique/laravel-sass aqui.
 
-An extremely simple and easy to understand MVC skeleton application, reduced to the max.
-Everything is **as simple as possible**, as **manually as possible** and as readable as possible.
-This project is - by intention - NOT a full framework, it's a bare-bone structure, written in
-purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
-like Zend2, Symfony or Laravel.
+Uma aplicação em PHP utilizando MVC extremamente simples e fácil de entender, reduzida ao máximo.
+Tudo é o mais **simples possível**, mais **manualmente possível** e o mais legível possível.
 
-[![Donate with PayPal banner](_tutorial/donate-with-paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
+O projeto - intencionalmente - NÃO é um framework completo, é uma estrutura crua, escrita em
+PHP puro nativo ! O php-mvc skeleton tenta ser extremamente magro ("seco") ao contrário de framworks
+como Zend2, Symphoby ou Laravel.
 
-## Why does this project exist ?
+### Objetivos do projeto:
 
-One of the biggest question in the PHP world is "How do I build an application ?".
-It's hard to find a good base, a good file structure and useful information on that, but at the same time
-there are masses of frameworks that might be really good, but really hard to understand, hard to use and extremely
-complex. This project tries to be some kind of naked skeleton bare-bone for quick application building,
-especially for the not-so-advanced coder.
+- disponibilizar uma estrutura básica em PHP utilizando MVC
+- ensinar o básico da arquitetura Model-View-Controller
+- encorajar a codificação de acordo com os padrões PSR 1/2
+- promover o uso do PDO
+- promover o uso de bibliotecas externas usando Composer
+- promover desenvolvimento com o máximo de controle de exceção
+- promover códigos comentados
+- promover o uso de PHP Orientado a Objeto
+- usar apenas PHP nativo para que as pessoas não sejam obrigadas a aprender um framework
 
-### Goals of this project:
-
-- give people a clean base MVC structure to build a modern PHP application with
-- teach people the basics of the Model-View-Controller architecture
-- encourage people to code according to PSR 1/2 coding guidelines
-- promote the usage of PDO
-- promote the usage of external libraries via Composer
-- promote development with max. error reporting
-- promote to comment code
-- promote the usage of OOP code
-- using only native PHP code, so people don't have to learn a framework
-
-## Installation
+## Instalação
 
 1. First, install Composer ([How to install Composer on Ubuntu, Debian or Windows 7/8](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)).
 That's some kind of PHP standard now and there's no reason to work without Composer. If you think "I don't need/want

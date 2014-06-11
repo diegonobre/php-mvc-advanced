@@ -20,7 +20,7 @@ class StatsModel
      */
     public function getAmountOfSongs()
     {
-        $sql = "SELECT COUNT(id) AS amount_of_songs FROM song";
+        $sql = "SELECT COUNT(1) AS amount_of_songs FROM information_schema.tables WHERE table_schema = 'sigfacil'";
         $query = $this->db->prepare($sql);
         $query->execute();
 

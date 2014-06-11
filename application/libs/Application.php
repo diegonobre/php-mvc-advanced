@@ -27,11 +27,12 @@ class Application
         $this->splitUrl();
 
         // check for controller: does such a controller exist ?
-        if (file_exists('./application/controller/' . $this->url_controller . '.php')) {
+//        die('./application/controller/' . ucfirst($this->url_controller) . 'Controller.php');
+        if (file_exists('./application/controller/' . ucfirst($this->url_controller) . 'Controller.php')) {
 
             // if so, then load this file and create this controller
             // example: if controller would be "car", then this line would translate into: $this->car = new car();
-            require './application/controller/' . $this->url_controller . '.php';
+            require './application/controller/' . ucfirst($this->url_controller) . 'Controller.php';
             $this->url_controller = new $this->url_controller();
 
             // check for method: does such a method exist in the controller ?
@@ -57,7 +58,12 @@ class Application
             }
         } else {
             // invalid URL, so simply show home/index
-            require './application/controller/home.php';
+            if ($this->url_controller != null && $this->url_controller != 'home')
+            {
+                die('Nao existe o controller: ' . $this->url_controller);
+            }
+            
+            require './application/controller/HomeController.php';
             $home = new Home();
             $home->index();
         }
@@ -83,6 +89,9 @@ class Application
             $this->url_parameter_1 = (isset($url[2]) ? $url[2] : null);
             $this->url_parameter_2 = (isset($url[3]) ? $url[3] : null);
             $this->url_parameter_3 = (isset($url[4]) ? $url[4] : null);
+            
+            // limpa url para utilizar hifen
+            $this->url_action = str_replace('-', '', $this->url_action);
 
             // for debugging. uncomment this if you have problems with the URL
             // echo 'Controller: ' . $this->url_controller . '<br />';

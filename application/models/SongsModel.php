@@ -19,7 +19,7 @@ class SongsModel
      */
     public function getAllSongs()
     {
-        $sql = "SELECT id, artist, track, link FROM song";
+        $sql = "SELECT table_schema, table_name FROM information_schema.tables";
         $query = $this->db->prepare($sql);
         $query->execute();
 

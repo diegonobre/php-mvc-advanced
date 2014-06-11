@@ -19,8 +19,8 @@ if (file_exists('vendor/autoload.php')) {
 require 'application/config/config.php';
 
 // load application class
-require 'application/libs/application.php';
-require 'application/libs/controller.php';
+require 'application/libs/Application.php';
+require 'application/libs/Controller.php';
 
 // run the scss compiler every you the application is hit (in development)
 // TODO: build a switch for development/production

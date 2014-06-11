@@ -26,7 +26,7 @@ class Home extends Controller
      */
     public function exampleOne()
     {
-        $this->render('home/example_one');
+        $this->render('home/example-one');
     }
 
     /**
@@ -36,6 +36,6 @@ class Home extends Controller
      */
     public function exampleTwo()
     {
-        $this->render('home/example_two');
+        $this->render('home/example-two');
     }
 }
